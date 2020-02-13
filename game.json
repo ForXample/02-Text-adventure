@@ -1,22 +1,101 @@
 {
-	"START": {
-		"name": "",
-		"desc": "",
-		"exits": [
-			{
-				"exit": "south",
-				"target": "END"
-			}
+	"FRD": {
+		"name": "First Road",
+		"desc": "This is a normal road, nothing peculiar.",
+		"exits": [{
+			"exit": "NORTH",
+			"target": "BUSP"
+		}, {
+			"exit": "SOUTH",
+			"target": "SRD"
+		}],
+		"items": [
+            {
+                "item": "key",
+                "desc": "A key is lying on the ground, next to the trashcan.",
+                "take": "You pick the key up off the ground."
+            }
+        ]
+	},
+	"BUSP": {
+		"name": "Bus Stop",
+		"desc": "This is the place where you get on bus normally.",
+		"exits": [{
+			"exit": "SOUTH",
+			"target": "FRD"
+		}],
+		"items": []
+	},
+	"SRD": {
+		"name": "Second Road",
+		"desc": "This is a normal road, nothing peculiar.",
+		"exits": [{
+			"exit": "NORTH",
+			"target": "FRD"
+		}, {
+			"exit": "SOUTH",
+			"target": "TRD"
+		}, {
+			"exit": "WEST",
+			"target": "LOAB"
+		}],
+		"items": []
+	},
+	"TRD": {
+		"name": "Third Road",
+		"desc": "The weather drastically changed. A storm is coming!",
+		"exits": [{
+			"exit": "NORTH",
+			"target": "SRD"
+		}],
+		"items": []
+	},
+	"LOAB": {
+		"name": "Lobby of the Academy Building",
+		"desc": "'Strange... When was it built? Why haven't I ever noticed this building?'",
+		"exits": [{
+			"exit": "NORTH",
+			"target": "CNR"
+		}, {
+			"exit": "WEST",
+			"target": "MLR"
+		}, {
+			"exit": "SOUTH",
+			"target": "LEH"
+		}
 		]
-	}
-	,"END": {
-		"name": "",
-		"desc": "",
-		"exits": [
-			{
-				"exit": "north",
-				"target": "START"
-			}
-		]
+	},
+	"CNR": {
+		"name": "Conference",
+		"desc": "Hmmm, it must have been a while since last time it was visited. So much dust... Ewww, spiders...",
+		"exits":[{
+			"exit": "SOUTH",
+			"target": "LOAB"
+		}],
+		"items":[{
+			"item": "bullets",
+			"desc": "Unlike any other thing in this building, this pack of bullets are shinny, as if it was just produced from the factory.",
+			"take": "You pick the pack of bullets."
+		}]
+	},
+	"MLR": {
+		"name": "Mailroom",
+		"desc": "It was abandoned a long time ago, the calendar on the wall reads '13th Mar 1947'.",
+		"exits":[{
+			"exit": "EAST"
+		}],
+		"items": [{
+			"item": "gun",
+			"desc": "I'm no expert but I can definitely tell this thing is aged. Not sure if it even works had I pulled the trigger.",
+			"take": "You pick the gun from the desk."
+		}
+		]},
+	"LEH": {
+		"name": "Lecture Hall",
+		"desc": "This room smells filthy... I should leave now.",
+		"exit":[{
+			"exit": "NORTH",
+			"target": "LOAB"
+		}]
 	}
 }
