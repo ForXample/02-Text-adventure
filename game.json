@@ -1,0 +1,22 @@
+{
+	"START": {
+		"name": "",
+		"desc": "",
+		"exits": [
+			{
+				"exit": "south",
+				"target": "END"
+			}
+		]
+	}
+	,"END": {
+		"name": "",
+		"desc": "",
+		"exits": [
+			{
+				"exit": "north",
+				"target": "START"
+			}
+		]
+	}
+}
